@@ -1,0 +1,24 @@
+#wrap {}
+#wrap header {}
+#wrap header #h_top {background-color: #000; text-align: center;}
+#wrap header #h_top a {color: #fff; font-size: 0.75rem; line-height: 34px;}
+#wrap header #h_bottom {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 10px 90px; align-items: center;
+}
+#wrap header #h_bottom #logo_gnb {display: flex; flex-flow: row nowrap; align-items: center;}
+#wrap header #h_bottom h1 {margin-right: 62px;}
+#wrap header #h_bottom h1 a {}
+#wrap header #h_bottom h1 a img {width: 100%;}
+#wrap header #h_bottom #gnb {display: flex; flex-flow: row nowrap; gap: 16px;}
+#wrap header #h_bottom #gnb a {
+    background-color: aqua; 
+    line-height: 40px; width: 80px; 
+    display: block; 
+    text-align: center;
+}
+#wrap header #h_bottom .lnb {display: flex; flex-flow: row nowrap; gap: 16px;}
+#wrap header #h_bottom .lnb li {}
+#wrap header #h_bottom .lnb li a:first-child {line-height: 24px;}
+#wrap footer {}
