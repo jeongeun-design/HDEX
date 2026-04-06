@@ -180,10 +180,17 @@
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper {}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .archives_bg .archives * {color: #fff;}
-#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_thum {height: 544px;}
-#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_thum img {height: 100%;}
+#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_thum {height: 600px; width: 100%;}
+#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_thum img {height: 100%; width: auto; object-fit: cover;}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt {}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_category {}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_title {}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_day {}
 /* ============================================================================================instagram */
+#wrap main .instagram {display: flex; gap: 30px; padding: 70px 30px;}
+#wrap main .instagram .insta_link {}
+#wrap main .instagram .insta_link .instaid {margin-bottom: 20px;}
+#wrap main .instagram .insta_link .instaid img {}
+#wrap main .instagram .insta_link .instaid p {}
+#wrap main .instagram .insta_thum {display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;}
+#wrap main .instagram .insta_thum img {width: 100%;}
