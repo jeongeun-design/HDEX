@@ -16,6 +16,7 @@ const collectionSwiper = new Swiper(collectionWrap,{
     loop:true,
     slidesPerView:3,
     spaceBetween:28,
+    // autoplay:true,
 })
 
 const festaSwiper = new Swiper(festaWrap,{
@@ -68,9 +69,8 @@ const newSwiper = new Swiper(newWrap,{
 const heroSwiper = new Swiper(hero,{
     autoplay:{delay:2000,},
     loop:true,
-
-    pagination:{
-        el:'.swiper-pagination',
-        type: 'progressber',
-        },
+    pagination: {
+        el: '.hero_swiper .swiper-pagination', // 해당 슬라이더 내의 페이지네이션 선택
+        type: 'progressbar', // 점(bullet)이 아닌 바(bar) 형태
+    },
 });
