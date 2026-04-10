@@ -56,12 +56,19 @@
     background-color: #000;
     height: 100%;
 }
-.product .tab_contents .swiper-button-prev.prev {left: auto; right: 138px; top: auto; bottom: 90px;}
-.product .tab_contents .swiper-button-next.next {right: 90px; top: auto; bottom: 90px;}
-.product .tab_contents .swiper-button-prev.prev,
-.product .tab_contents .swiper-button-next.next {transform: scale(0.54);}
-.product .tab_contents .swiper-button-prev.prev svg,
-.product .tab_contents .swiper-button-next.next svg {color: #1C1B1F;}
+
+.product .tab_contents .swiper-button-prev.new_prev, 
+.product .tab_contents .swiper-button-prev.best_prev {left: auto; right: 138px; top: auto; bottom: 90px;}
+.product .tab_contents .swiper-button-next.new_next,
+.product .tab_contents .swiper-button-next.best_next {right: 90px; top: auto; bottom: 90px;}
+.product .tab_contents .swiper-button-prev.new_prev,
+.product .tab_contents .swiper-button-prev.best_prev,
+.product .tab_contents .swiper-button-next.best_next,
+.product .tab_contents .swiper-button-next.new_next {transform: scale(0.54);}
+.product .tab_contents .swiper-button-prev.new_prev svg,
+.product .tab_contents .swiper-button-prev.best_prev svg,
+.product .tab_contents .swiper-button-next.best_next svg,
+.product .tab_contents .swiper-button-next.new_next svg {color: #1C1B1F;}
 #wrap main .product .tab_contents .swiper-pagination.swiper-pagination-progressbar {
     width: calc(100% - 180px); 
     left: 50%;
@@ -138,6 +145,12 @@
 #wrap main .promotion_bnr .promotion .swiper-wrapper .swiper-slide .promotion_txt p span {font-size: 2.5rem;}
 #wrap main .promotion_bnr .promotion .swiper-wrapper .slide1 {background-image: url(../images/promotion_bnr_001.jpg);}
 #wrap main .promotion_bnr .promotion .swiper-wrapper .slide2 {background-image: url(../images/promotion_bnr_002.jpg);}
+.promotion_bnr .promotion .swiper-button-prev.pr_prev {left: 40px;}
+.promotion_bnr .promotion .swiper-button-next.pr_next {right: 40px;}
+.promotion_bnr .promotion .swiper-button-prev.pr_prev,
+.promotion_bnr .promotion .swiper-button-next.pr_next {transform: scale(0.77);}
+.promotion_bnr .promotion .swiper-button-prev.pr_prev svg,
+.promotion_bnr .promotion .swiper-button-next.pr_next svg {color: rgba(0,0,0,0.36);}
 /* ============================================================================================festa */
 #wrap main .festa {display: grid; grid-template-columns: 4fr 6fr; gap: 66px; padding: 70px 90px;}
 #wrap main .festa .festa_left {

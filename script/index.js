@@ -28,14 +28,18 @@ const festaSwiper = new Swiper(festaWrap,{
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.festa_right .tab_contents .swiper-button-next.festa_next',
+        prevEl: '.festa_right .tab_contents .swiper-button-prev.festa_prev',
     },
 })
 
 const promotionSwiper = new Swiper(promotion,{
     loop:true,
     autoplay:{delay:2000,},
+    navigation: {
+        nextEl: '.promotion .swiper-button-next.pr_next',
+        prevEl: '.promotion .swiper-button-prev.pr_next',
+    },
 })
 
 const bestSwiper = new Swiper(bestWrap,{
@@ -47,8 +51,8 @@ const bestSwiper = new Swiper(bestWrap,{
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.best_wrap .tab_contents .swiper-button-next.best_next',
+        prevEl: '.best_wrap .tab_contents .swiper-button-prev.best_prev',
     },
 })
 
@@ -61,8 +65,8 @@ const newSwiper = new Swiper(newWrap,{
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.new_wrap .tab_contents .swiper-button-next.new_next',
+        prevEl: '.new_wrap .tab_contents .swiper-button-prev.new_prev',
     },
 })
 
