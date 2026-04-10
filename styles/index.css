@@ -27,15 +27,19 @@
     z-index: 100;
 }
 /* ============================================================================================ 컬러칩 공통 */
-.thum_color_wrap {}
-.thum_color_wrap .thum_color {width: max-content;}
-.thum_color_wrap .thum_color::after {
-    content: ''; display: block;
-    left: 0; top: 0; color: aqua; background-color: blue;
+.thum_color_wrap {display: flex; gap: 8px;}
+.thum_color_wrap .thum_color {
+    display: block;
     width: 18px; height: 18px; 
-    float: left; margin-right: 8px;
     border-radius: 50%; 
 }
+.thum_color.bk {background: #000}
+.thum_color.wh {background: #fff; border: 1px solid #5C5C5C;}
+.thum_color.gr {background: #BABABA}
+.thum_color.nv {background: #171952}
+.thum_color.pk {background: #FFC2C9}
+.thum_color.rd {background: #ff0000;}
+.thum_color.kk {background: #687866;}
 /* ============================================================================================product swiper wrap */
 #wrap main .festa_right {padding: 0 0 50px; position: relative; width: 100%; height: auto;}
 #wrap main .festa_right .tab_contents .swiper-pagination-progressbar-fill {
