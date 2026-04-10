@@ -2,6 +2,7 @@
 #wrap header {position: fixed; z-index: 999; width: 100%; background-color: #fff;}
 #wrap header #h_top {background-color: #000; text-align: center;}
 #wrap header #h_top a {color: #fff; font-size: 0.75rem; line-height: 34px;}
+
 #wrap header #h_bottom {
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
@@ -21,7 +22,37 @@
 #wrap header #h_bottom .lnb li {line-height: 24px;}
 #wrap header #h_bottom .lnb li a {display: flex; align-items: center;}
 #wrap header #h_bottom .lnb li a img {width: 100%;}
-#wrap footer {background-color: grey;}
+/* ============================================================================================ footer */
+footer address span, footer * dd {line-height: 1.7;}
+footer * dt {font-size: 0.94rem; font-weight: 500; margin-bottom: 20px;}
+footer * dd {font-size: 0.88rem;}
+#wrap footer {}
+#wrap footer #f_top {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+    padding: 14px 90px;
+    border-block: 1px solid #000;
+}
+#wrap footer #f_top > a {width: 80px; height: 25px;}
+#wrap footer #f_top > a img {width: 100%;}
+#wrap footer #f_top .sns {display: flex; flex-flow: row nowrap; align-items: center; gap: 20px;}
+#wrap footer #f_top .sns a {width: 28px; display: flex; align-items: center;}
+#wrap footer #f_top .sns a img {width: 100%;}
+#wrap footer #f_bottom {padding: 70px 90px; display: grid; grid-template-columns: 6fr 4fr;}
+#wrap footer #f_bottom .f_left {display: flex; flex-flow: column wrap; gap: 20px;}
+#wrap footer #f_bottom .f_left #fnb {margin-bottom: 20px;}
+#wrap footer #f_bottom .f_left #fnb li {margin-right: 20px; float: left;}
+#wrap footer #f_bottom .f_left #fnb li a {font-weight: 500;}
+#wrap footer #f_bottom .f_left address {display: flex;}
+#wrap footer #f_bottom .f_left address span:first-child {margin-right: 40px;}
+#wrap footer #f_bottom .f_right {display: flex; flex-flow: row wrap; gap: 40px;}
+#wrap footer #f_bottom .f_right .info {}
+#wrap footer #f_bottom .f_right .info dt {}
+#wrap footer #f_bottom .f_right .info dd {}
+#wrap footer #f_bottom .f_right .info dt:first-child+dd {margin-bottom: 30px;}
+#wrap footer #f_bottom .f_right .bank {}
+#wrap footer #f_bottom .f_right .bank dt {}
+#wrap footer #f_bottom .f_right .bank dd {}
 /* ============================================================================================ fab */
 #wrap main .fab {position: fixed; right: 20px; bottom: 26px; z-index: 999;}
 #wrap main .fab a {

@@ -28,7 +28,14 @@
 }
 /* ============================================================================================ 컬러칩 공통 */
 .thum_color_wrap {}
-.thum_color_wrap .thum_color {}
+.thum_color_wrap .thum_color {width: max-content;}
+.thum_color_wrap .thum_color::after {
+    content: ''; display: block;
+    left: 0; top: 0; color: aqua; background-color: blue;
+    width: 18px; height: 18px; 
+    float: left; margin-right: 8px;
+    border-radius: 50%; 
+}
 /* ============================================================================================product swiper wrap */
 #wrap main .festa_right {padding: 0 0 50px; position: relative; width: 100%; height: auto;}
 #wrap main .festa_right .tab_contents .swiper-pagination-progressbar-fill {
@@ -49,6 +56,12 @@
     background-color: #000;
     height: 100%;
 }
+.product .tab_contents .swiper-button-prev.prev {left: auto; right: 138px; top: auto; bottom: 90px;}
+.product .tab_contents .swiper-button-next.next {right: 90px; top: auto; bottom: 90px;}
+.product .tab_contents .swiper-button-prev.prev,
+.product .tab_contents .swiper-button-next.next {transform: scale(0.54);}
+.product .tab_contents .swiper-button-prev.prev svg,
+.product .tab_contents .swiper-button-next.next svg {color: #1C1B1F;}
 #wrap main .product .tab_contents .swiper-pagination.swiper-pagination-progressbar {
     width: calc(100% - 180px); 
     left: 50%;
@@ -97,7 +110,7 @@
 #wrap main .tab_contents .swiper .swiper-wrapper .swiper-slide a .potho img {width: 100%;}
 #wrap main a .details {}
 #wrap main a .details h2 {font-size: 0.95rem; font-weight: 500; margin-bottom: 5px;}
-#wrap main a .details .price {font-size: 0.88rem; line-height: 1.4;}
+#wrap main a .details .price {font-size: 0.88rem; line-height: 1.4; margin-bottom: 10px;}
 #wrap main a .details .price span {color: #727272; margin-right: 6px;}
 #wrap main a .details .price del {color: #C4C4C4;}
 /* ============================================================================================promotion swiper wrap */
@@ -148,10 +161,11 @@
     gap: 30px;
 }
 #wrap main .tab_contents .swiper .swiper-wrapper .swiper-slide a {}
-#wrap main .festa .festa_right .festa_swiper {
+#wrap main .festa .festa_right .festa_swiper { 
     width: 100%; min-width: 0; 
     overflow: hidden;
     position: relative;
+    padding-bottom: 50px;
 }
 #wrap main .festa .festa_right .festa_swiper .swiper-slide {height: 567px;}
 /* ============================================================================================collection */
@@ -179,9 +193,10 @@
 #wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_line .collec_txt h2 {font-size: 1.75rem; margin-bottom: 10px;}
 #wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_line .collec_txt p {}
 #wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_product {
-    margin: 14px 0; display: grid; grid-template-columns: 96px 1fr; gap: 20px;
+    margin: 14px 0; display: grid; grid-template-columns: 96px 1fr; gap: 14px;
+    border-bottom: 1px solid #C4C4C4; padding-bottom: 14px;
 }
-#wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_product .collec_product_thum {height: 128px;}
+#wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_product .collec_product_thum {height: 100%;}
 #wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_product .collec_product_thum img {width: 100%;}
 #wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_product .details {}
 
@@ -212,8 +227,12 @@
 /* ============================================================================================instagram */
 #wrap main .instagram {display: flex; gap: 30px; padding: 70px 30px;}
 #wrap main .instagram .insta_link {}
-#wrap main .instagram .insta_link .instaid {margin-bottom: 20px;}
+#wrap main .instagram .insta_link .instaid {
+    display: grid; grid-template-columns: 36px 1fr; 
+    align-items: center; gap: 10px;
+    margin-bottom: 20px;
+}
 #wrap main .instagram .insta_link .instaid img {}
-#wrap main .instagram .insta_link .instaid p {}
+#wrap main .instagram .insta_link .instaid p {font-weight: 500; font-size: 1.25rem;}
 #wrap main .instagram .insta_thum {display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;}
 #wrap main .instagram .insta_thum img {width: 100%;}
