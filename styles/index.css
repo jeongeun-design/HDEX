@@ -40,6 +40,7 @@
 .thum_color.pk {background: #FFC2C9}
 .thum_color.rd {background: #ff0000;}
 .thum_color.kk {background: #687866;}
+.thum_color.br {background: #C8DBFA;}
 /* ============================================================================================product swiper wrap */
 #wrap main .festa_right {padding: 0 0 50px; position: relative; width: 100%; height: auto;}
 #wrap main .festa_right .tab_contents .swiper-pagination-progressbar-fill {
