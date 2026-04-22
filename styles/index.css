@@ -76,12 +76,18 @@
 }
 .tab_contents [class*="_prev"] svg,
 .tab_contents [class*="_next"] svg {color: #1C1B1F;}
-.tab_contents .new_prev,
+
+.tab_contents [class*="_prev"] {left: auto; right: 138px;}
+.tab_contents [class*="_next"] {right: 90px;}
+
+/* .tab_contents .new_prev,
 .tab_contents .glc_prev,
 .tab_contents .best_prev {left: auto; right: 138px;}
+
 .tab_contents .glc_next,
 .tab_contents .new_next,
 .tab_contents .best_next {right: 90px;}
+ */
 #wrap main .product .tab_contents .swiper-pagination.swiper-pagination-progressbar {
     width: calc(100% - 180px); 
     left: 50%;

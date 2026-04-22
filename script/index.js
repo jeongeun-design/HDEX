@@ -207,7 +207,7 @@ const newGSwiper = new Swiper(newContent[0],{
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.new_wrap .tab_contents .swiper-button-next.glc_next',
+        nextEl: '.new_wrap .tab_contents .swiper-button-next',
         prevEl: '.new_wrap .tab_contents .swiper-button-prev.glc_prev',
     },
 })
