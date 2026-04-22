@@ -7,62 +7,52 @@ const collectionWrap = document.querySelector('.collection_swiper');
 const archivesWrap = document.querySelector('.archives_swiper');
 const newTitle = document.querySelectorAll('.new_wrap .tab_menu a');
 const newContent = document.querySelectorAll('.tab_contents .new_swiper');
+const bestTitle = document.querySelectorAll('.best_wrap .tab_menu a');
+const bestContent = document.querySelectorAll('.tab_contents .best_swiper');
 console.log(hero, newWrap, bestWrap, promotion, festaWrap, collectionWrap, archivesWrap);
 console.log('---------');
-console.log(newTitle,newContent);
+console.log(newTitle,newContent,bestTitle,bestContent);
 
+/* ================================================best_swiper 탭메뉴 */
+for(let bestTab of bestTitle){
+    console.log(bestTab);
+    bestTab.addEventListener('click',function(e){
+        e.preventDefault();
+        for (const title of bestTitle) {
+            title.classList.remove('active');
+        }
+        for (const content of bestContent) {
+            content.style.display = 'none';
+        }
+        bestTab.classList.add('active');
+        const bestIndex = this.dataset.index;
+        bestContent[bestIndex].style.display = 'block';
+    });
+}
+/* ================================================new_swiper 탭메뉴 */
+for(let newTab of newTitle){
+    console.log(newTab);
+    newTab.addEventListener('click',function(e){
+        e.preventDefault();
+        for (const title of newTitle) {
+            title.classList.remove('active');
+        }
+        for (const content of newContent) {
+            content.style.display = 'none';
+        }
+        newTab.classList.add('active');
+        const ntIndex = this.dataset.index;
+        newContent[ntIndex].style.display = 'block';
+    });
+}
 
-newTitle[0].addEventListener('click', function(e) {
-    e.preventDefault();
-    for (const title of newTitle) {
-        title.classList.remove('active');
-    }
-    for (const content of newContent) {
-        content.style.display = 'none';
-    }
-    newTitle[0].classList.add('active');
-    newContent[0].style.display = 'block';
-});
-newTitle[1].addEventListener('click', function(e) {
-    e.preventDefault();
-    for (const title of newTitle) {
-        title.classList.remove('active');
-    }
-    for (const content of newContent) {
-        content.style.display = 'none';
-    }
-    newTitle[1].classList.add('active');
-    newContent[1].style.display = 'block';
-});
-newTitle[2].addEventListener('click', function(e) {
-    e.preventDefault();
-    for (const title of newTitle) {
-        title.classList.remove('active');
-    }
-    for (const content of newContent) {
-        content.style.display = 'none';
-    }
-    newTitle[2].classList.add('active');
-    newContent[2].style.display = 'block';
-});
-newTitle[3].addEventListener('click', function(e) {
-    e.preventDefault();
-    for (const title of newTitle) {
-        title.classList.remove('active');
-    }
-    for (const content of newContent) {
-        content.style.display = 'none';
-    }
-    newTitle[3].classList.add('active');
-    newContent[3].style.display = 'block';
-});
-
-
+/* ================================================archives Swiper */
 const archivesSwiper = new Swiper(archivesWrap,{
     loop:true,
     slidesPerView:3,
     spaceBetween:20,
 })
+/* ================================================collection Swiper */
 const collectionSwiper = new Swiper(collectionWrap,{
     loop:true,
     slidesPerView:3,
@@ -70,6 +60,7 @@ const collectionSwiper = new Swiper(collectionWrap,{
     autoplay:true,
 })
 
+/* ================================================festa Swiper */
 const festaSwiper = new Swiper(festaWrap,{
     loop:true,
     slidesPerView:3,
@@ -84,6 +75,7 @@ const festaSwiper = new Swiper(festaWrap,{
     },
 })
 
+/* ================================================promotion Swiper */
 const promotionSwiper = new Swiper(promotion,{
     loop:true,
     autoplay:{delay:2000,},
@@ -93,12 +85,37 @@ const promotionSwiper = new Swiper(promotion,{
     },
 })
 
+/* ================================================best Swiper */
+const bestWAwiper = new Swiper(bestContent[2],{
+    loop:true,
+    slidesPerView:4,
+    spaceBetween:20,
+    pagination: {
+        el: '.best_wrap .swiper-pagination',
+        type: 'progressbar',
+    },
+    navigation: {
+        nextEl: '.best_wrap .tab_contents .swiper-button-next.best_next',
+        prevEl: '.best_wrap .tab_contents .swiper-button-prev.best_prev',
+    },
+})
+const bestWSwiper = new Swiper(bestContent[1],{
+    loop:true,
+    slidesPerView:4,
+    spaceBetween:20,
+    pagination: {
+        el: '.best_wrap .swiper-pagination',
+        type: 'progressbar',
+    },
+    navigation: {
+        nextEl: '.best_wrap .tab_contents .swiper-button-next.best_next',
+        prevEl: '.best_wrap .tab_contents .swiper-button-prev.best_prev',
+    },
+})
 const bestSwiper = new Swiper(bestWrap,{
     loop:true,
-    slidesPerView:'auto',
-    spaceBetween:20, 
-    centeredSlides: false,
-    autoHeight: true,
+    slidesPerView:4,
+    spaceBetween:20,
     pagination: {
         el: '.best_wrap .swiper-pagination',
         type: 'progressbar',
@@ -109,19 +126,7 @@ const bestSwiper = new Swiper(bestWrap,{
     },
 })
 
-/* const newSwiper = new Swiper(newWrap,{
-    loop:true,
-    slidesPerView:4,
-    spaceBetween:20,
-    pagination: {
-        el: '.new_wrap .swiper-pagination',
-        type: 'progressbar',
-    },
-    navigation: {
-        nextEl: '.new_wrap .tab_contents .swiper-button-next.new_next',
-        prevEl: '.new_wrap .tab_contents .swiper-button-prev.new_prev',
-    },
-}) */
+/* ================================================new Swiper */
 const newASwiper = new Swiper(newContent[3],{
     loop:true,
     slidesPerView:4,
@@ -175,11 +180,12 @@ const newGSwiper = new Swiper(newContent[0],{
     },
 })
 
+/* ================================================hero Swiper */
 const heroSwiper = new Swiper(hero,{
     autoplay:{delay:2000,},
     loop:true,
     pagination: {
-        el: '.hero_swiper .swiper-pagination', // 해당 슬라이더 내의 페이지네이션 선택
-        type: 'progressbar', // 점(bullet)이 아닌 바(bar) 형태
+        el: '.hero_swiper .swiper-pagination',
+        type: 'progressbar',
     },
 });

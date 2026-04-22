@@ -56,8 +56,10 @@
     height: 2px;
 }
 /*  */
-.tab_contents .new_swiper {display: none;}
-.tab_contents .new_swiper.active {display: block;}
+.tab_contents .swiper {display: none;}
+.tab_contents .swiper.active {display: block;}
+.tab_contents .best {display: none;}
+.tab_contents .best.active {display: block;}
 #wrap main .product {padding: 70px 90px 140px; position: relative; width: 100%; height: auto;}
 #wrap main .product .tab_contents .swiper-pagination-progressbar-fill {
     background-color: #000;
@@ -118,17 +120,29 @@
 #wrap main .product_top .more img {width: 100%;}
 #wrap main {position: relative;}
 #wrap main .tab_contents {}
-#wrap main .tab_contents .best_swiper {padding: 240px 0;}
-#wrap main .tab_contents .best_swiper .swiper-wrapper {height: auto; align-items: center;}
-#wrap main .tab_contents .best_swiper .swiper-wrapper .swiper-slide {
-    width: 22%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
+#wrap main .tab_contents .best_swiper {}
+#wrap main .tab_contents .best_swiper .swiper-wrapper {}
+#wrap main .tab_contents .best_swiper .swiper-wrapper .swiper-slide-active a span.best_num {
+    width: 44px; line-height: 44px;
+    left: 0; top: 0;
+    display: block;
 }
-#wrap main .tab_contents .best_swiper .swiper-wrapper .swiper-slide-active {
-    width: 32%; height: 500px;
+#wrap main .tab_contents .best_swiper .swiper-wrapper .swiper-slide {position: relative;}
+#wrap main .tab_contents .best_swiper .swiper-wrapper .swiper-slide a .best_num {
+    position: absolute; left: 0; top: 0;
+    width: 38px; line-height: 38px;
+    background-color: #000; color: #fff;
+    font-size: 1.25rem;
+    text-align: center; z-index: 100;
+}
+#wrap main .tab_contents .best_swiper .swiper-wrapper .swiper-slide .potho {
+    overflow: hidden; height: 600px;
+}
+#wrap main .tab_contents .best_swiper .swiper-wrapper .swiper-slide-active .potho {
+    overflow: hidden; height: 700px;
+}
+#wrap main .tab_contents .best_swiper .swiper-wrapper .swiper-slide-active .potho img {
+    transform: scale(1.1); transform-origin: center top;
 }
 #wrap main .tab_contents .swiper {}
 #wrap main .tab_contents .swiper .swiper-wrapper {align-items: center;}
