@@ -27,6 +27,12 @@
 * 반복되는 js 수정
 * best 디자인 추가 필요
 ### 0420
-* 검색창 js수정
-### 04221
-* 베스트 첫번째 슬라이드만 크기 변경: 세로 길이를 짧게 수정
+* 검색창 js수정 필요
+### 0421
+* 베스트 스와이퍼 첫번째 슬라이드만 크기 변경 -> transform: scale(1.1); transform-origin: center top;
+### 0421
+* .swiper-slide-active .potho 길어서 여백 생기는 문제 -> 이미지 object-fit: cover;
+* swiper-button 안 되는 문제 -> 태그 구조 수정(각각의 스와이퍼와 형제위치에 존재하도록 수정)
+* swiper-button 선택 시 다른 스와이퍼의 버튼이 선택되는 문제 -> 같은 위치의 높은 버튼이 선택됨 active, display:none; 수정 
+* 페스타 pagination 버튼 클릭 시 사라지는 문제
+* 탭메뉴 js 수정 (new_wrap~)

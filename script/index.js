@@ -5,7 +5,7 @@ const promotion = document.querySelector('.promotion');
 const collectionWrap = document.querySelector('.collection_swiper');
 const archivesWrap = document.querySelector('.archives_swiper');
 const newTitle = document.querySelectorAll('.new_wrap .tab_menu a');
-const newContent = document.querySelectorAll('.tab_contents .new_swiper');
+const newContent = document.querySelectorAll('.tab_contents .new_ct_wrap');
 const bestTitle = document.querySelectorAll('.best_wrap .tab_menu a');
 const bestContent = document.querySelectorAll('.tab_contents .best_swiper');
 const festaTitle = document.querySelectorAll('.festa_right .tab_menu a');
@@ -13,7 +13,7 @@ const festaContent = document.querySelectorAll('.festa_right .tab_contents .fest
 
 console.log(hero, newWrap, bestWrap, promotion, collectionWrap, archivesWrap);
 console.log('---------');
-console.log(newTitle,newContent,bestTitle,bestContent, festaTitle, festaContent);
+console.log(newTitle,'-----',newContent,'-----',bestTitle,bestContent, festaTitle, festaContent);
 
 /* ================================================festa_swiper 탭메뉴 */
 for(let festaTab of festaTitle){
@@ -198,17 +198,17 @@ const newMSwiper = new Swiper(newContent[1],{
         prevEl: '.new_wrap .tab_contents .swiper-button-prev.new_prev',
     },
 }) */
-const newGSwiper = new Swiper(newContent[0],{
+const newGSwiper = new Swiper(newContent[0].children[0],{
     loop:true,
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: '.new_wrap .swiper-pagination.gcl_pagination',
+        el: '.new_wrap .swiper-pagination.glc_pagination',
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.new_wrap .tab_contents .swiper-button-next',
-        prevEl: '.new_wrap .tab_contents .swiper-button-prev.glc_prev',
+        nextEl: document.querySelector('.glc_next'),
+        prevEl: document.querySelector('.glc_prev'),
     },
 })
 
