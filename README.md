@@ -40,6 +40,4 @@
 * 페스타 pagination 버튼 클릭 시 사라지는 문제
 * 탭메뉴 js 수정 (new~)
 ### 0423
-* js 객체 안 잡히는 문제-> querySelector 변경
-* 베스트 women 스와이퍼 pagination,pagination 안 보이는 문제 -> 선택자 오타 수정
-* 페스타 버튼 js 작동 랜덤하게 됨 + prve 사라짐(heigh 0)
+* 페스타 top prev, 베스트 women pagination,pagination 안 보이는 문제 -> 태그, 선택자 오타 수정

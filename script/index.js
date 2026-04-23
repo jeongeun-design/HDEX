@@ -99,8 +99,8 @@ const festaBSwiper = new Swiper(festaContent[1].children[0],{
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.festa_bottom_prev'),
-        nextEl: document.querySelector('.festa_bottom_next'),
+        prevEl: '.festa_bottom_prev',
+        nextEl: '.festa_bottom_next',
     },
 })
 const festaTSwiper = new Swiper(festaContent[0].children[0],{
