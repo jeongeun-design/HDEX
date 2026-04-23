@@ -9,11 +9,11 @@ const search = document.querySelector('.user_nav .search');
 console.log(gnb, lnb, subLnb, menuBack, topBtn, searchWrap, search);
 
 searchWrap.style.display = 'none';
-
+/*
 search.addEventListener('click',function(e){
     e.preventDefault(); 
     searchWrap.style.display = 'block';
-})
+}) */
 
 topBtn.style.display = 'none';
 

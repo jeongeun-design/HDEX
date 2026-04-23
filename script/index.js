@@ -1,3 +1,12 @@
+/**
+ * GitHub Repository Phishing Alert Appeal & Project Verification
+이 페이지는 깃허브에서 발생한 피싱 경고 오탐지(False Positive)를 해명하고, 해당 코드가 순수한 학습 및 포트폴리오용임을 증명하기 위해 작성되었습니다.
+ * PROJECT: Portfolio Prototype
+ * WARNING: This script does not process real transactions or user credentials.
+ * All functions are for demonstration purposes only.
+ */
+
+
 const hero = document.querySelector('.hero_swiper');
 const newWrap = document.querySelectorAll('.new_swiper');
 const bestWrap = document.querySelector('.best_swiper');
@@ -7,9 +16,10 @@ const archivesWrap = document.querySelector('.archives_swiper');
 const newTitle = document.querySelectorAll('.new_wrap .tab_menu a');
 const newContent = document.querySelectorAll('.tab_contents .new_ct_wrap');
 const bestTitle = document.querySelectorAll('.best_wrap .tab_menu a');
-const bestContent = document.querySelectorAll('.tab_contents .best_swiper');
+const bestContent = document.querySelectorAll('.tab_contents .best_ct_wrap');
+// const bestCtContent = document.querySelectorAll('.tab_contents .best_ct_wrap');
 const festaTitle = document.querySelectorAll('.festa_right .tab_menu a');
-const festaContent = document.querySelectorAll('.festa_right .tab_contents .festa_swiper');
+const festaContent = document.querySelectorAll('.festa_right .tab_contents .festa_ct_wrap');
 
 console.log(hero, newWrap, bestWrap, promotion, collectionWrap, archivesWrap);
 console.log('---------');
@@ -61,7 +71,7 @@ for(let newTab of newTitle){
         newTab.classList.add('active');
         const ntIndex = this.dataset.index;
         newContent[ntIndex].style.display = 'block';
-    });
+    }); 
 }
 
 /* ================================================archives Swiper */
@@ -79,30 +89,31 @@ const collectionSwiper = new Swiper(collectionWrap,{
 })
 
 /* ================================================festa Swiper */
-const festaTSwiper = new Swiper(festaContent[0],{
+console.log('.festa_bottom_prev');
+const festaBSwiper = new Swiper(festaContent[1].children[0],{
     loop:true,
     slidesPerView:3,
     spaceBetween:20,
     pagination: {
-        el: '.festa_right .swiper-pagination',
+        el: document.querySelector('.festa_bottom_pagination'),
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.festa_right .tab_contents .swiper-button-next.festa_next',
-        prevEl: '.festa_right .tab_contents .swiper-button-prev.festa_prev',
+        prevEl: document.querySelector('.festa_bottom_prev'),
+        nextEl: document.querySelector('.festa_bottom_next'),
     },
 })
-const festaBSwiper = new Swiper(festaContent[1],{
+const festaTSwiper = new Swiper(festaContent[0].children[0],{
     loop:true,
     slidesPerView:3,
     spaceBetween:20,
     pagination: {
-        el: '.festa_right .swiper-pagination',
+        el: '.festa_top_pagination',
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.festa_right .tab_contents .swiper-button-next.festa_next',
-        prevEl: '.festa_right .tab_contents .swiper-button-prev.festa_prev',
+        prevEl: document.querySelector('.festa_top_prev'),
+        nextEl: document.querySelector('.festa_top_next'),
     },
 })
 
@@ -117,98 +128,100 @@ const promotionSwiper = new Swiper(promotion,{
 })
 
 /* ================================================best Swiper */
-const bestWAwiper = new Swiper(bestContent[2],{
+const bestASwiper = new Swiper(bestContent[2].children[0],{
     loop:true,
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: '.best_wrap .swiper-pagination',
+        el: document.querySelector('.best_acc_pagination'),
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.best_wrap .tab_contents .swiper-button-next.best_next',
-        prevEl: '.best_wrap .tab_contents .swiper-button-prev.best_prev',
+        prevEl: document.querySelector('.best_acc_prev'),
+        nextEl: document.querySelector('.best_acc_next'),
     },
 })
-const bestWSwiper = new Swiper(bestContent[1],{
+const bestWSwiper = new Swiper(bestContent[1].children[0],{
     loop:true,
     slidesPerView:4,
     spaceBetween:20,
+    observer: true,
+    observeParents: true,
     pagination: {
-        el: '.best_wrap .swiper-pagination',
+        el: document.querySelector('.best_women_pagination'),
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.best_wrap .tab_contents .swiper-button-next.best_next',
-        prevEl: '.best_wrap .tab_contents .swiper-button-prev.best_prev',
+        prevEl: document.querySelector('.best_women_prev'),
+        nextEl: document.querySelector('.best_women_next'),
     },
 })
-const bestSwiper = new Swiper(bestWrap,{
+const bestMSwiper = new Swiper(bestContent[0].children[0],{
     loop:true,
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: '.best_wrap .swiper-pagination',
+        el: document.querySelector('.best_man_pagination'),
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.best_wrap .tab_contents .swiper-button-next.best_next',
-        prevEl: '.best_wrap .tab_contents .swiper-button-prev.best_prev',
+        prevEl: document.querySelector('.best_man_prev'),
+        nextEl: document.querySelector('.best_man_next'),
     },
 })
 
-/* ================================================new Swiper */
-/*
-const newASwiper = new Swiper(newContent[3],{
+/* ================================================ new Swiper */
+
+const newASwiper = new Swiper(newContent[3].children[0],{
     loop:true,
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: '.new_wrap .swiper-pagination',
+        el: '.new_wrap .swiper-pagination.new_acc_pagination',
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.new_wrap .tab_contents .swiper-button-next.new_next',
-        prevEl: '.new_wrap .tab_contents .swiper-button-prev.new_prev',
+        prevEl: document.querySelector('.new_acc_prev'),
+        nextEl: document.querySelector('.new_acc_next'),
     },
 })
-const newWSwiper = new Swiper(newContent[2],{
+const newWSwiper = new Swiper(newContent[2].children[0],{
     loop:true,
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: '.new_wrap .swiper-pagination',
+        el: '.new_wrap .swiper-pagination.new_women_pagination',
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.new_wrap .tab_contents .swiper-button-next.new_next',
-        prevEl: '.new_wrap .tab_contents .swiper-button-prev.new_prev',
+        prevEl: document.querySelector('.new_women_prev'),
+        nextEl: document.querySelector('.new_women_next'),
     },
 })
-const newMSwiper = new Swiper(newContent[1],{
+const newMSwiper = new Swiper(newContent[1].children[0],{
     loop:true,
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: '.new_wrap .swiper-pagination',
+        el: '.new_wrap .swiper-pagination.new_men_pagination',
         type: 'progressbar',
     },
     navigation: {
-        nextEl: '.new_wrap .tab_contents .swiper-button-next.new_next',
-        prevEl: '.new_wrap .tab_contents .swiper-button-prev.new_prev',
+        prevEl: document.querySelector('.new_men_prev'),
+        nextEl: document.querySelector('.new_men_next'),
     },
-}) */
+})
 const newGSwiper = new Swiper(newContent[0].children[0],{
     loop:true,
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: '.new_wrap .swiper-pagination.glc_pagination',
+        el: '.new_wrap .swiper-pagination.new_glc_pagination',
         type: 'progressbar',
     },
     navigation: {
-        nextEl: document.querySelector('.glc_next'),
-        prevEl: document.querySelector('.glc_prev'),
+        prevEl: document.querySelector('.new_glc_prev'),
+        nextEl: document.querySelector('.new_glc_next'),
     },
 })
 

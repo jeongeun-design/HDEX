@@ -55,12 +55,13 @@
     top: auto; bottom: 0; 
     height: 2px;
 }
-/*  */
-.new_ct_wrap {display: none;}
-.new_ct_wrap.active {display: block;}
-.tab_contents .new_swiper,
+/* swiper 설정 */
+/* .best_women_swiper {padding-bottom: 70px;} */
+.new_ct_wrap, .best_ct_wrap, .festa_ct_wrap {display: none;}
+.new_ct_wrap.active, .best_ct_wrap.active, .festa_ct_wrap.active {display: block;}
+/* .tab_contents .new_swiper,
 .tab_contents .festa_swiper,
-.tab_contents .best_swiper {display: none;}
+.tab_contents .best_swiper {display: none;} */
 .tab_contents .swiper.active {display: block;}
 .tab_contents .best {display: none;}
 .tab_contents .best.active {display: block;}
@@ -71,7 +72,7 @@
 }
 .festa_right .tab_contents .festa_prev,
 .festa_right .tab_contents .festa_next {bottom: 26px; display: block;}
-.festa_right .tab_contents .festa_prev {left: auto; right: 54px;}
+.festa_right .tab_contents .festa_prev {right: 48px;}
 .festa_right .tab_contents .festa_next {right: 0;}
 .tab_contents [class*="_prev"],
 .tab_contents [class*="_next"] {

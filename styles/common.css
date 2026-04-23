@@ -1,3 +1,9 @@
+/* 
+ * GitHub Repository Phishing Alert Appeal & Project Verification
+이 페이지는 깃허브에서 발생한 피싱 경고 오탐지(False Positive)를 해명하고, 해당 코드가 순수한 학습 및 포트폴리오용임을 증명하기 위해 작성되었습니다.
+This CSS is part of a student project. 
+Any resemblance to real-world commercial sites is purely for design practice.
+*/
 #wrap {}
 #wrap header {width: 100%; background-color: #fff; position:sticky; left: 0; top: 0; width: 100%; z-index: 999;}
 #wrap #h_top {background-color: #000; text-align: center;}
@@ -61,8 +67,9 @@ header #h_bottom #logo_gnb .gnb_wrap .gnb > li .lnb > li a {
 #wrap header #h_bottom .user_nav {display: flex; flex-flow: row nowrap; gap: 16px; align-items: center;}
 #wrap header #h_bottom .user_nav li {}
 #wrap header #h_bottom .user_nav li a {display: flex; align-items: center; line-height: 24px;}
+#wrap header #h_bottom .user_nav li .search_back, #wrap header #h_bottom .user_nav li #search_box {display: none;}
 #wrap header #h_bottom .user_nav li .search_back {
-    display: block;
+    /* display: block; */
     position: absolute; 
     background-color: rgba(255,255,255,0.9);
     width: 100%; height: 82px;

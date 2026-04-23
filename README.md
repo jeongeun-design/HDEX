@@ -1,3 +1,6 @@
+**"This is a portfolio project for educational purposes."**
+* 이것은 교육 목적의 포트폴리오 프로젝트입니다.
+
 ## 26/03/27 작성 시작
 ### 0327
 * 페스타까지 작성 완료
@@ -30,9 +33,13 @@
 * 검색창 js수정 필요
 ### 0421
 * 베스트 스와이퍼 첫번째 슬라이드만 크기 변경 -> transform: scale(1.1); transform-origin: center top;
-### 0421
+### 0422
 * .swiper-slide-active .potho 길어서 여백 생기는 문제 -> 이미지 object-fit: cover;
 * swiper-button 안 되는 문제 -> 태그 구조 수정(각각의 스와이퍼와 형제위치에 존재하도록 수정)
 * swiper-button 선택 시 다른 스와이퍼의 버튼이 선택되는 문제 -> 같은 위치의 높은 버튼이 선택됨 active, display:none; 수정 
 * 페스타 pagination 버튼 클릭 시 사라지는 문제
-* 탭메뉴 js 수정 (new_wrap~)
+* 탭메뉴 js 수정 (new~)
+### 0423
+* js 객체 안 잡히는 문제-> querySelector 변경
+* 베스트 women 스와이퍼 pagination,pagination 안 보이는 문제 -> 선택자 오타 수정
+* 페스타 버튼 js 작동 랜덤하게 됨 + prve 사라짐(heigh 0)
