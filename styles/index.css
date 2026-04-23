@@ -57,8 +57,8 @@
 }
 /* swiper 설정 */
 /* .best_women_swiper {padding-bottom: 70px;} */
-.new_ct_wrap, .best_ct_wrap, .festa_ct_wrap {display: none;}
-.new_ct_wrap.active, .best_ct_wrap.active, .festa_ct_wrap.active {display: block;}
+.new_ct_wrap, .best_ct_wrap, .festa_ct_wrap, .archives_ct_wrap {display: none;}
+.new_ct_wrap.active, .best_ct_wrap.active, .festa_ct_wrap.active, .archives_ct_wrap.active {display: block;}
 /* .tab_contents .new_swiper,
 .tab_contents .festa_swiper,
 .tab_contents .best_swiper {display: none;} */
@@ -274,17 +274,18 @@
 #wrap main .archives_bg .archives .product_top .archives_swiper {height: auto;}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper {}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide {}
-#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_thum {height: 600px; width: 100%; overflow: hidden;}
+#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_thum {height: 600px; width: 100%; overflow: hidden; display: block;}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_thum img {height: 100%; width: 100%; object-fit: cover;}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt {margin-top: 20px;}
-#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt p {color: #fff}
+#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt p,
+#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt a {color: #fff}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_category {
     padding: 1px 3px;
     background-color: #fff; color: #000 !important; 
     font-size: 0.75rem;
     display: inline-block;
 }
-#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_title {line-height: 1.7; margin: 5px 0;}
+#wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_title {display: block; line-height: 1.7; margin: 5px 0;}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_day {font-size: 0.81rem; color: #9D9D9D;}
 /* ============================================================================================instagram */
 #wrap main .instagram {display: flex; gap: 30px; padding: 70px 30px;}

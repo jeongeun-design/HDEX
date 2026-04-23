@@ -12,19 +12,36 @@ const newWrap = document.querySelectorAll('.new_swiper');
 const bestWrap = document.querySelector('.best_swiper');
 const promotion = document.querySelector('.promotion');
 const collectionWrap = document.querySelector('.collection_swiper');
-const archivesWrap = document.querySelector('.archives_swiper');
+const archivesTitle = document.querySelectorAll('.archives .tab_menu a');
+const archivesContent = document.querySelectorAll('.archives_ct_wrap');
 const newTitle = document.querySelectorAll('.new_wrap .tab_menu a');
 const newContent = document.querySelectorAll('.tab_contents .new_ct_wrap');
 const bestTitle = document.querySelectorAll('.best_wrap .tab_menu a');
 const bestContent = document.querySelectorAll('.tab_contents .best_ct_wrap');
-// const bestCtContent = document.querySelectorAll('.tab_contents .best_ct_wrap');
 const festaTitle = document.querySelectorAll('.festa_right .tab_menu a');
 const festaContent = document.querySelectorAll('.festa_right .tab_contents .festa_ct_wrap');
 
-console.log(hero, newWrap, bestWrap, promotion, collectionWrap, archivesWrap);
+console.log(hero, newWrap, bestWrap, promotion, collectionWrap, archivesContent);
+console.log(newTitle,newContent,bestTitle,bestContent, festaTitle, festaContent);
 console.log('---------');
-console.log(newTitle,'-----',newContent,'-----',bestTitle,bestContent, festaTitle, festaContent);
+console.log(archivesTitle);
 
+/* ================================================ archives_swiper 탭메뉴 */
+for(let archivesTab of archivesTitle){
+    archivesTab.addEventListener('click',function(e){
+        e.preventDefault();
+        for (const title of archivesTitle) {
+            title.classList.remove('active');
+        }
+        for (const content of archivesContent) {
+            content.style.display = 'none';
+        }
+        archivesTab.classList.add('active');
+        const archivesIndex = this.dataset.index;
+        archivesContent[archivesIndex].style.display = 'block';
+        console.log(archivesContent);
+    });
+}
 /* ================================================festa_swiper 탭메뉴 */
 for(let festaTab of festaTitle){
     console.log(festaTab);
@@ -75,7 +92,22 @@ for(let newTab of newTitle){
 }
 
 /* ================================================archives Swiper */
-const archivesSwiper = new Swiper(archivesWrap,{
+const archivesJSwiper = new Swiper(archivesContent[0].children[0],{
+    loop:true,
+    slidesPerView:3,
+    spaceBetween:20,
+})
+const archivesSSwiper = new Swiper(archivesContent[1].children[0],{
+    loop:true,
+    slidesPerView:3,
+    spaceBetween:20,
+})
+const archivesCSwiper = new Swiper(archivesContent[2].children[0],{
+    loop:true,
+    slidesPerView:3,
+    spaceBetween:20,
+})
+const archivesLSwiper = new Swiper(archivesContent[3].children[0],{
     loop:true,
     slidesPerView:3,
     spaceBetween:20,
@@ -95,7 +127,7 @@ const festaBSwiper = new Swiper(festaContent[1].children[0],{
     slidesPerView:3,
     spaceBetween:20,
     pagination: {
-        el: document.querySelector('.festa_bottom_pagination'),
+        el: '.festa_bottom_pagination',
         type: 'progressbar',
     },
     navigation: {
@@ -112,8 +144,8 @@ const festaTSwiper = new Swiper(festaContent[0].children[0],{
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.festa_top_prev'),
-        nextEl: document.querySelector('.festa_top_next'),
+        prevEl: '.festa_top_prev',
+        nextEl: '.festa_top_next',
     },
 })
 
@@ -133,12 +165,12 @@ const bestASwiper = new Swiper(bestContent[2].children[0],{
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: document.querySelector('.best_acc_pagination'),
+        el: '.best_acc_pagination',
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.best_acc_prev'),
-        nextEl: document.querySelector('.best_acc_next'),
+        prevEl: '.best_acc_prev',
+        nextEl: '.best_acc_next',
     },
 })
 const bestWSwiper = new Swiper(bestContent[1].children[0],{
@@ -148,12 +180,12 @@ const bestWSwiper = new Swiper(bestContent[1].children[0],{
     observer: true,
     observeParents: true,
     pagination: {
-        el: document.querySelector('.best_women_pagination'),
+        el: '.best_women_pagination',
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.best_women_prev'),
-        nextEl: document.querySelector('.best_women_next'),
+        prevEl: '.best_women_prev',
+        nextEl: '.best_women_next',
     },
 })
 const bestMSwiper = new Swiper(bestContent[0].children[0],{
@@ -161,12 +193,12 @@ const bestMSwiper = new Swiper(bestContent[0].children[0],{
     slidesPerView:4,
     spaceBetween:20,
     pagination: {
-        el: document.querySelector('.best_man_pagination'),
+        el: '.best_man_pagination',
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.best_man_prev'),
-        nextEl: document.querySelector('.best_man_next'),
+        prevEl: '.best_man_prev',
+        nextEl: '.best_man_next',
     },
 })
 
@@ -181,8 +213,8 @@ const newASwiper = new Swiper(newContent[3].children[0],{
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.new_acc_prev'),
-        nextEl: document.querySelector('.new_acc_next'),
+        prevEl: '.new_acc_prev',
+        nextEl: '.new_acc_next',
     },
 })
 const newWSwiper = new Swiper(newContent[2].children[0],{
@@ -194,8 +226,8 @@ const newWSwiper = new Swiper(newContent[2].children[0],{
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.new_women_prev'),
-        nextEl: document.querySelector('.new_women_next'),
+        prevEl: '.new_women_prev',
+        nextEl: '.new_women_next',
     },
 })
 const newMSwiper = new Swiper(newContent[1].children[0],{
@@ -207,8 +239,8 @@ const newMSwiper = new Swiper(newContent[1].children[0],{
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.new_men_prev'),
-        nextEl: document.querySelector('.new_men_next'),
+        prevEl: '.new_men_prev',
+        nextEl: '.new_men_next',
     },
 })
 const newGSwiper = new Swiper(newContent[0].children[0],{
@@ -220,8 +252,8 @@ const newGSwiper = new Swiper(newContent[0].children[0],{
         type: 'progressbar',
     },
     navigation: {
-        prevEl: document.querySelector('.new_glc_prev'),
-        nextEl: document.querySelector('.new_glc_next'),
+        prevEl: '.new_glc_prev',
+        nextEl: '.new_glc_next',
     },
 })
 

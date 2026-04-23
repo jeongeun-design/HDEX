@@ -20,11 +20,12 @@ Any resemblance to real-world commercial sites is purely for design practice.
 #wrap header #h_bottom h1 a {}
 #wrap header #h_bottom h1 a img {width: 100%;}
 header #h_bottom #logo_gnb .gnb_wrap {}
+/* 메뉴 흰색 배경 */
 header #h_bottom #logo_gnb .gnb_wrap .menu_back {
     display: none;
     position: absolute; 
     background-color: rgba(255,255,255,0.9);
-    width: 100%; height: 300px;
+    width: 100%; height: 250px;
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
