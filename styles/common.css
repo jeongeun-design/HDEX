@@ -4,7 +4,7 @@
 This CSS is part of a student project. 
 Any resemblance to real-world commercial sites is purely for design practice.
 */
-#wrap {}
+#wrap {min-width: 1920px;}
 #wrap header {width: 100%; background-color: #fff; position:sticky; left: 0; top: 0; width: 100%; z-index: 999;}
 #wrap #h_top {background-color: #000; text-align: center;}
 #wrap #h_top a {color: #fff; font-size: 0.75rem; line-height: 34px;}
@@ -31,24 +31,18 @@ header #h_bottom #logo_gnb .gnb_wrap .menu_back {
     transform: translateX(-50%);
     z-index: 100;
 }
-header #h_bottom #logo_gnb .gnb_wrap .menu_back .meun_bnr span:nth-child(4) em {font-size: 0.75rem; margin-bottom:12px; color: #fff;}
-header #h_bottom #logo_gnb .gnb_wrap .menu_back .meun_bnr span:nth-child(4) {
-    display: block; 
-    width: 205px; line-height: 28px; 
-    border: 1px solid #fff; text-align: center;
-}
 header #h_bottom #logo_gnb .gnb_wrap .menu_back .meun_bnr span:nth-child(3) {font-size: 0.88rem; font-weight: 600; margin-bottom:20px;}
 header #h_bottom #logo_gnb .gnb_wrap .menu_back .meun_bnr span:nth-child(2) {font-size: 1.5rem; font-weight: 700; margin-bottom:12px;}
-header #h_bottom #logo_gnb .gnb_wrap .menu_back .meun_bnr span:nth-child(1) {font-size: 0.75rem; margin-bottom:12px;}
+header #h_bottom #logo_gnb .gnb_wrap .menu_back .meun_bnr span:nth-child(1) {font-size: 0.75rem; margin:12px 0;}
 header #h_bottom #logo_gnb .gnb_wrap .menu_back .meun_bnr > * {
-    color: #fff; font-weight: 500;
+    color: #fff; font-weight: 500; 
 }
 header #h_bottom #logo_gnb .gnb_wrap .menu_back .meun_bnr {
     position: absolute; top: 29px; right: 118px;
     background-image: url(../images/menu_bnr_001.jpg);
     background-size: cover; background-position: center;
     width: 680px; height: 193px;
-    display: flex; flex-flow: column nowrap; justify-content: center; align-items: center;
+    display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; z-index: 500;
 }
 header #h_bottom #logo_gnb .gnb_wrap .gnb {display: flex; flex-flow: row nowrap; gap: 16px; position: relative;}
 header #h_bottom #logo_gnb .gnb_wrap .gnb > li {position: relative;}
@@ -68,20 +62,30 @@ header #h_bottom #logo_gnb .gnb_wrap .gnb > li:nth-child(5) .lnb {
     display: none; flex-flow: row nowrap; gap: 16px;
     position: absolute;
 }
+header #h_bottom #logo_gnb .gnb_wrap .gnb > li .lnb > li {position: relative;}
+header #h_bottom #logo_gnb .gnb_wrap .gnb > li:last-child .lnb > li::after {height: 50px;}
+header #h_bottom #logo_gnb .gnb_wrap .gnb > li:last-child .lnb > li:last-child::after {padding-bottom: 50px;}
+header #h_bottom #logo_gnb .gnb_wrap .gnb > li .lnb > li::after {
+    content: ''; left: -100vh; top: 0; 
+    width: 300vh; height: 100%; display: block; 
+    position: absolute; z-index: -1;
+}
 header #h_bottom #logo_gnb .gnb_wrap .gnb > li .lnb {
     display: none; flex-flow: column nowrap;
     position: absolute;
-    top: 60px; left: 50%;
+    top: 60px; left: 50%; 
     transform: translateX(-50%);
     z-index: 400; 
+    /* padding: 0 100px; */
 }
 header #h_bottom #logo_gnb .gnb_wrap .gnb > li:nth-child(4) > .lnb > li > a,
 header #h_bottom #logo_gnb .gnb_wrap .gnb > li:nth-child(5) > .lnb > li > a {font-size: 0.94rem; font-weight: 500;}
-header #h_bottom #logo_gnb .gnb_wrap .gnb > li .lnb > li a {
+header #h_bottom #logo_gnb .gnb_wrap .gnb > li .lnb > li a:hover {font-weight: 600;}
+header #h_bottom #logo_gnb .gnb_wrap .gnb > li .lnb > li a { 
     line-height: 50px; width: 80px; 
     display: block; 
     text-align: center;
-    font-size: 0.88rem; z-index: 300;
+    font-size: 0.88rem; z-index: 500;
 }
 /* ============================================================================================ user_nav */
 #wrap header #h_bottom .user_nav {display: flex; flex-flow: row nowrap; gap: 16px; align-items: center;}

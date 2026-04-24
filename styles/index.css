@@ -251,8 +251,8 @@
     background: rgba(0,0,0,0.4);
     width: 100%; padding: 22px 44px; line-height: 108px;
 }
-#wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_line .collec_txt * {color: #fff; font-weight: 600;}
-#wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_line .collec_txt h2 {font-size: 1.75rem; margin-bottom: 10px;}
+#wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_line .collec_txt * {color: #fff;}
+#wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_line .collec_txt h2 {font-size: 1.75rem; margin-bottom: 10px; font-weight: 600;}
 #wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_line .collec_txt p {}
 #wrap main .collection .collection_swiper .swiper-wrapper .swiper-slide .collec_product {
     margin: 14px 0; display: grid; grid-template-columns: 96px 1fr; gap: 14px;
@@ -266,11 +266,11 @@
 #wrap main .archives_bg {background: #000; padding: 70px 0 70px 90px;}
 #wrap main .archives_bg .archives {}
 #wrap main .archives_bg .archives .product_top {padding-right: 90px;}
-#wrap main .archives_bg .archives .product_top * {color: #fff !important;}
+#wrap main .archives_bg .archives .product_top * {color: #fff;}
 #wrap main .archives_bg .archives .product_top .more img {filter: invert(100%);}
 #wrap main .archives_bg .archives .product_top .tab_menu {}
-#wrap main .archives_bg .archives .product_top .tab_menu a {font-weight: 300; width: 100%;}
-#wrap main .archives_bg .archives .product_top .tab_menu a.active {font-weight: 500;}
+#wrap main .archives_bg .archives .product_top .tab_menu a {font-weight: 300; width: 100%; color: #9E9E9E;}
+#wrap main .archives_bg .archives .product_top .tab_menu a.active {color: #fff;}
 #wrap main .archives_bg .archives .product_top .archives_swiper {height: auto;}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper {}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide {}
@@ -280,10 +280,11 @@
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt p,
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt a {color: #fff}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_category {
-    padding: 1px 3px;
-    background-color: #fff; color: #000 !important; 
+    padding: 1.5px 3.5px;
+    background-color: rgba(255, 255, 255, 0.83); color: #000; 
     font-size: 0.75rem;
     display: inline-block;
+    border-radius: 2px;
 }
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_title {display: block; line-height: 1.7; margin: 5px 0;}
 #wrap main .archives_bg .archives .archives_swiper .swiper-wrapper .swiper-slide .archives_txt .archives_day {font-size: 0.81rem; color: #9D9D9D;}

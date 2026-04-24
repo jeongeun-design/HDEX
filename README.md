@@ -41,4 +41,3 @@
 * 탭메뉴 js 수정 (new~)
 ### 0423
 * 페스타 top prev, 베스트 women pagination,pagination 안 보이는 문제 -> 태그, 선택자 오타 수정
-* 크기 줄지 않도록 min-widht 설정 필요/서브메뉴 광고배너 변경/아카이브 탭메뉴 색상 변경/컬렉션 굵기 얇게
