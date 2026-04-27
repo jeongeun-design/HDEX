@@ -152,7 +152,7 @@ const festaTSwiper = new Swiper(festaContent[0].children[0],{
 /* ================================================promotion Swiper */
 const promotionSwiper = new Swiper(promotion,{
     loop:true,
-    autoplay:{delay:2000,},
+    autoplay:{delay:3400,},
     navigation: {
         nextEl: '.promotion .swiper-button-next.pr_next',
         prevEl: '.promotion .swiper-button-prev.pr_prev',
@@ -259,7 +259,7 @@ const newGSwiper = new Swiper(newContent[0].children[0],{
 
 /* ================================================hero Swiper */
 const heroSwiper = new Swiper(hero,{
-    autoplay:{delay:2000,},
+    autoplay:{delay:3400,},
     loop:true,
     pagination: {
         el: '.hero_swiper .swiper-pagination',
